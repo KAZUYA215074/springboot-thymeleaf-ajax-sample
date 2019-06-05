@@ -148,3 +148,55 @@ console.log(birthday);
 var answer5=Math.pow(2,3);
 
 console.log(answer5);
+
+function sample1(){
+	document.sampleForm.nowText.value = new Date();
+}
+
+imgRotate = 0;
+function sample2(){
+	var targetText = document.getElementById("blueOrRedText");
+	if(targetText.style.color == "blue"){
+		targetText.style.color = "red";
+	}else{
+		targetText.style.color = "blue";
+	}
+	
+	var targetImg = document.getElementById("jsImg");
+	imgRotate += 90;
+	targetImg.style.transform = "rotate(" + imgRotate + "deg)";
+	
+}
+
+function sample3(target){
+	var triathlonDiv = document.getElementById("triathlon");
+	var otherDiv = document.getElementById("other");
+	if(target.value == "1"){
+		triathlonDiv.style.display = "block";
+		otherDiv.style.display = "none";
+	}else if(target.value == "2"){
+		triathlonDiv.style.display = "none";
+		otherDiv.style.display = "block";
+	}else{
+		triathlonDiv.style.display = "none";
+		otherDiv.style.display = "none";
+	}	
+}
+
+function sample4(){
+	var namValue = document.sample4Form.name.value;
+	if(nameValue == ""){
+		alert("名前を入れえてください！");
+	}else{
+		document.sample4Form.submit();
+	}
+}
+
+function sample5(buttonObj){
+	buttonObj.disabled = "disabled";
+}
+
+function sample6(){
+	alert("投稿ではなく削除のダミーフォームをセット！");
+	document.sample6Form.submit();
+}

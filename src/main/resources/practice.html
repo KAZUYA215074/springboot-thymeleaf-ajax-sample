@@ -9,5 +9,82 @@ console.log("牧田和也");
 <script src="sample.js"></script>
 </head>
 <body>
+
+〇サンプル１（現在日付をテキストボックスにいれる）<br>
+<form name="sampleForm">
+	<input type="text" name="nowText">
+	<input type="button" value="現在の日付を入れる" onclick="sample1();">
+</form>
+<hr>
+〇サンプル２（CSSを動的に変える：テキストの色を入れ替える＆画像回転）　<hr>
+<div id="blueOrRedText" style="color:blue">青と赤の入れ替え</div>
+<img id="jsImg" src="./javascript_logo.jpg" width="150px"><br>
+<input type="button" value="色の入れ替え＆画像回転" onclick="sample2();">
+<hr>
+〇サンプル３（HTML要素の表示、非表示を切り替える）
+<form name="sample3Form">
+	<ul>
+		<li>
+			趣味は何ですか？
+			<select name="hobby" onchange="sample3(this);">
+				<option value="0">--</option>
+				<option value="1">トライアスロン</option>
+				<option value="2">その他</option>				
+			</select>
+		</li>
+	</ul>
+	<div id="triathlon" style="display:none;">
+		それでは好きな種目は？
+		<input type="radio" name="favorite" value="swim">Swim
+		<input type="radio" name="favorite" value="Bike">Bile
+		<input type="radio" name="favorite" value="run">Run
+	</div>
+	<div id="other" style="display:none;">
+		それでは何が好き？
+		<input type="text" name="favorite">
+	</div>
+</form>
+<hr>
+〇サンプル４（フォーム送信ボボタンを押した時、送信前に入力フォーム内容をチェックする）
+<form name="sample#4Form" action="#">
+	<ul>
+		<li>
+			名前：<input type="text" name="name">
+		</li>
+	</ul>
+	<input type="button" value="入力値チェック" onclick="sample4();">
+</form>
+<hr>
+〇サンプル５（ダブルサブミット）対策：１度押したら度寝以降押せなくする）<br>
+<form action="#">
+	<ul>
+		<li>
+			名前：<input type="text" name="name">
+		</li>
+	</ul>
+	
+	<input type="button" value="送信" onclick="sample5(this);">
+</form>
+<hr>
+〇サンプル６（ダミーフォームを作りボタンを横に並べる）<br>
+ダミーフォームお使わない例（ボタンを横に並べない）
+<form action="#" method="post">
+名前:<input type="text" name="name"><br>
+記事:<textarea rows="5" cols="20" name="article"></textarea><br>
+<input type="submit" value="投稿">
+</form>
+<form action="#">
+<input type="submit" value="すべて削除">
+</form>
+ダミーフォームを使った例（ボタンを横に並べる）
+<form action="#" method="post">
+名前:<input type="text" name="name"><br>
+記事：<textarea rows="5" cols="20" name="article"></textarea><br>
+<input type="submit" value="投稿">
+<input type="submit" value="すべて削除" onclick="sample6();">
+</form>
+<form action="#" name="sample6Form">
+<!-- ダミーフォーム -->
+</form>
 </body>
 </html>
