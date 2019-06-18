@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+$(function(){
+	$("button").on("mouseover",function(){$(this).closest("tr").css("background-color","red")});
+	$("button").on("mouseout",function(){$(this).closest("td").css("background-color","blue")});
+	$("button").on("mouseout",function(){$(this).closest("tr").css("background-color","white")});
+});
+</script>
+</head>
+<body>
+<table>
+<tr id="tr1"><td>カレー</td><td><button>行の色を変えるボタン</button></td></tr>
+<tr id="tr2"><td>ごはん</td><td><button>行の色を変えるボタン</button></td></tr>
+<tr id="tr2"><td>うどん</td><td><button>行の色を変えるボタン</button></td></tr>
+</table>
+</body>
+</html>

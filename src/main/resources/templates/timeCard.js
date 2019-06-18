@@ -1,3 +1,11 @@
 /**
  * 
  */
+
+function plus(){
+	
+}
+
+function mine(){
+	
+}
